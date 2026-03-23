@@ -11,6 +11,18 @@ const Home: React.FC = () => {
   const { t, language } = useLanguage();
   const { data: notices, loading: noticesLoading } = useFirestore<Notice>('notices', [orderBy('date', 'desc'), limit(5)]);
   
+  const hardcodedNotice = { 
+    id: 'gb-2025', 
+    titleEn: 'GENERAL BODY FOR THE SESSION 2025 – 2026', 
+    titleOl: '᱒᱐᱒᱕ – ᱒᱐᱒᱖ ᱥᱮᱥᱚᱱ ᱞᱟᱹᱜᱤᱫ ᱡᱮᱱᱮᱨᱟᱞ ᱵᱚᱰᱤ', 
+    date: '2025-11-09', 
+    isImportant: true, 
+    contentEn: 'All Members are hereby informed that according to our last meeting held on 9th November for the purpose of the new GB member formation was successfully conducted. The new GB members have been elected for the session 2025-2026.', 
+    contentOl: 'ᱡᱚᱛᱚ ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱰᱟᱭ ᱚᱪᱚ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ ᱡᱮ ᱙ ᱱᱚᱵᱷᱮᱢᱵᱚᱨ ᱦᱤᱞᱚᱜ ᱦᱩᱭ ᱟᱠᱟᱱ ᱟᱵᱚᱣᱟᱜ ᱢᱩᱪᱟᱹᱫ ᱜᱟᱞᱢᱟᱨᱟᱣ ᱞᱮᱠᱟᱛᱮ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱵᱮᱱᱟᱣ ᱠᱟᱹᱢᱤ ᱱᱟᱯᱟᱭ ᱛᱮ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ ᱾ ᱒᱐᱒᱕-᱒᱐᱒᱖ ᱥᱮᱥᱚᱱ ᱞᱟᱹᱜᱤᱫ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱪᱷᱚᱱ ᱟᱠᱟᱱᱟ ᱾' 
+  };
+
+  const displayNotices = notices.length > 0 ? notices : [hardcodedNotice];
+  
   const topMembers = [
     { id: '1', nameEn: 'Shakespear Kisku', nameOl: 'ᱥᱮᱠᱥᱯᱤᱭᱚᱨ ᱠᱤᱥᱠᱩ', designationEn: 'President', designationOl: 'ᱯᱟᱨᱥᱮᱛ', roleEn: 'KGEC', roleOl: 'ᱠᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261786/WhatsApp_Image_2026-03-23_at_3.59.25_PM_kcpgkv.jpg' },
     { id: '2', nameEn: 'Sandip Hembram', nameOl: 'ᱥᱟᱱᱫᱤᱯ ᱦᱮᱢᱵᱽᱨᱚᱢ', designationEn: 'Vice-President', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ', roleEn: 'MAKAUT', roleOl: 'ᱢᱟᱠᱟᱣᱩᱴ', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261488/WhatsApp_Image_2026-03-23_at_3.54.23_PM_jtwdgc.jpg' },
@@ -68,8 +80,8 @@ const Home: React.FC = () => {
           <div className="border border-gov-border rounded-b bg-gov-light h-[400px] overflow-y-auto p-4 space-y-4 scrollbar-thin">
             {noticesLoading ? (
               <div className="flex justify-center py-12"><Loader2 className="animate-spin text-gov-blue" /></div>
-            ) : notices.length > 0 ? (
-              notices.map((notice) => (
+            ) : displayNotices.length > 0 ? (
+              displayNotices.map((notice) => (
                 <div key={notice.id} className="border-b border-gov-border pb-3 last:border-0">
                   <div className="flex justify-between items-start gap-2">
                     <span className="text-[10px] bg-gov-blue text-white px-2 py-0.5 rounded uppercase font-bold">
@@ -81,9 +93,18 @@ const Home: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  <h4 className="mt-2 text-sm font-semibold text-gov-blue hover:underline cursor-pointer">
+                  <Link 
+                    to="/notices" 
+                    className="mt-2 block text-sm font-semibold text-gov-blue hover:text-gov-accent transition-colors"
+                  >
                     {language === 'en' ? notice.titleEn : notice.titleOl}
-                  </h4>
+                  </Link>
+                  <Link 
+                    to="/notices" 
+                    className="text-[10px] text-gov-blue font-bold uppercase hover:underline flex items-center gap-0.5 mt-1"
+                  >
+                    View Details <ArrowRight size={10} />
+                  </Link>
                 </div>
               ))
             ) : (
