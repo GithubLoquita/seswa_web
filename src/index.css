@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Ol+Chiki:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-ol: "Noto Sans Ol Chiki", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-gov-blue: #003366;
+  --color-gov-dark: #1a1a1a;
+  --color-gov-light: #f8f9fa;
+  --color-gov-border: #dee2e6;
+  --color-gov-accent: #ff9933; /* Saffron touch */
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gov-dark font-sans;
+  }
+  
+  [lang="ol"] {
+    @apply font-ol;
+  }
+}
+
+/* Government-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

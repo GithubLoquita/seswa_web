@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "Notice": {
+      "title": "Notice",
+      "description": "A formal announcement or alert for the association members.",
+      "type": "object",
+      "properties": {
+        "titleEn": { "type": "string", "description": "Title in English" },
+        "titleOl": { "type": "string", "description": "Title in Ol Chiki" },
+        "contentEn": { "type": "string", "description": "Content in English" },
+        "contentOl": { "type": "string", "description": "Content in Ol Chiki" },
+        "date": { "type": "string", "format": "date", "description": "Date of the notice" },
+        "isImportant": { "type": "boolean", "description": "Whether the notice is high priority" },
+        "link": { "type": "string", "format": "uri", "description": "Optional external link" }
+      },
+      "required": ["titleEn", "titleOl", "contentEn", "contentOl", "date", "isImportant"]
+    },
+    "Member": {
+      "title": "Member",
+      "description": "A governing member of the association.",
+      "type": "object",
+      "properties": {
+        "nameEn": { "type": "string" },
+        "nameOl": { "type": "string" },
+        "designationEn": { "type": "string" },
+        "designationOl": { "type": "string" },
+        "roleEn": { "type": "string" },
+        "roleOl": { "type": "string" },
+        "photoUrl": { "type": "string", "format": "uri" },
+        "order": { "type": "integer" }
+      },
+      "required": ["nameEn", "nameOl", "designationEn", "designationOl", "photoUrl", "order"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "An association event like Annual Picnic or Freshers Welcome.",
+      "type": "object",
+      "properties": {
+        "titleEn": { "type": "string" },
+        "titleOl": { "type": "string" },
+        "descriptionEn": { "type": "string" },
+        "descriptionOl": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "year": { "type": "integer" },
+        "category": { "type": "string", "enum": ["Annual Picnic", "Freshers Welcome", "Other"] }
+      },
+      "required": ["titleEn", "titleOl", "descriptionEn", "descriptionOl", "date", "year", "category"]
+    },
+    "Achievement": {
+      "title": "Achievement",
+      "description": "Academic recognition for students.",
+      "type": "object",
+      "properties": {
+        "nameEn": { "type": "string" },
+        "nameOl": { "type": "string" },
+        "exam": { "type": "string", "enum": ["WBJEE", "IITJEE", "AIEEE"] },
+        "rank": { "type": "integer" },
+        "year": { "type": "integer" },
+        "descriptionEn": { "type": "string" },
+        "descriptionOl": { "type": "string" }
+      },
+      "required": ["nameEn", "nameOl", "exam", "rank", "year"]
+    },
+    "GalleryImage": {
+      "title": "GalleryImage",
+      "description": "An image for the association gallery.",
+      "type": "object",
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "category": { "type": "string", "enum": ["Events", "Awards", "Community Activities"] },
+        "captionEn": { "type": "string" },
+        "captionOl": { "type": "string" }
+      },
+      "required": ["url", "category", "captionEn", "captionOl"]
+    }
+  },
+  "firestore": {
+    "/notices/{noticeId}": { "schema": "Notice", "description": "Collection of association notices" },
+    "/members/{memberId}": { "schema": "Member", "description": "Collection of governing members" },
+    "/events/{eventId}": { "schema": "Event", "description": "Collection of association events" },
+    "/achievements/{achievementId}": { "schema": "Achievement", "description": "Collection of student achievements" },
+    "/gallery/{imageId}": { "schema": "GalleryImage", "description": "Collection of gallery images" }
+  }
+}
