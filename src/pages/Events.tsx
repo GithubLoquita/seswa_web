@@ -13,7 +13,7 @@ const Events: React.FC = () => {
       month: 'January',
       descriptionEn: 'A grand gathering of Santal engineering students from across West Bengal to celebrate unity and culture in a natural setting.',
       descriptionOl: 'ᱥᱟᱱᱛᱟᱲ ᱤᱱᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱢᱤᱫ ᱢᱟᱨᱟᱝ ᱡᱟᱣᱨᱟ, ᱡᱟᱦᱟᱸ ᱨᱮ ᱡᱩᱢᱤᱫᱽ ᱟᱨ ᱞᱟᱠᱪᱟᱨ ᱨᱮᱱᱟᱜ ᱨᱟᱹᱥᱠᱟᱹ ᱢᱟᱱᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱾',
-      image: 'https://picsum.photos/seed/picnic/800/400',
+      image: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774260308/WhatsApp_Image_2025-07-01_at_21.13.22_24f9b261_yuem3t.jpg',
       highlightsEn: ['Cultural Performances', 'Traditional Food', 'Networking Sessions'],
       highlightsOl: ['ᱞᱟᱠᱪᱟᱨ ᱮᱱᱮᱡ ᱥᱮᱨᱮᱧ', 'ᱟᱹᱨᱤᱪᱟᱹᱞᱤ ᱡᱚᱢᱟᱜ', 'ᱱᱮᱴᱣᱟᱨᱠᱤᱝ ᱥᱮᱥᱚᱱ'],
     },
@@ -24,7 +24,7 @@ const Events: React.FC = () => {
       month: 'October',
       descriptionEn: 'Welcoming the new batch of engineering students into our community, providing them with guidance and a sense of belonging.',
       descriptionOl: 'ᱱᱟᱣᱟ ᱤᱱᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚ ᱟᱵᱚᱣᱟᱜ ᱜᱟᱶᱛᱟ ᱨᱮ ᱟᱛᱟᱝ ᱫᱟᱨᱟᱢ, ᱩᱱᱠᱩ ᱫᱤᱥᱟᱹ ᱟᱨ ᱟᱯᱱᱟᱨ ᱢᱚᱱᱮ ᱮᱢ ᱾',
-      image: 'https://picsum.photos/seed/freshers/800/400',
+      image: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774260303/DSC00313_hny7hp.jpg',
       highlightsEn: ['Orientation Program', 'Senior-Junior Interaction', 'Talent Showcase'],
       highlightsOl: ['ᱳᱨᱤᱭᱮᱱᱴᱮᱥᱚᱱ ᱯᱨᱳᱜᱽᱨᱟᱢ', 'ᱥᱤᱱᱤᱭᱚᱨ-ᱡᱩᱱᱤᱭᱚᱨ ᱨᱚᱯᱚᱲ', 'ᱦᱩᱱᱟᱹᱨ ᱩᱫᱩᱜ'],
     }

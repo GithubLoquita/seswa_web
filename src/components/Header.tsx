@@ -31,8 +31,7 @@ const Header: React.FC = () => {
       {/* Top Strip */}
       <div className="bg-gov-blue text-white py-1 px-4 text-xs flex justify-between items-center border-b border-white/10">
         <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1"><Phone size={12} /> +91-XXXXXXXXXX</span>
-          <span className="flex items-center gap-1"><Mail size={12} /> contact@seswa.org.in</span>
+          <span className="flex items-center gap-1"><Mail size={12} /> seswa@gmail.com</span>
         </div>
         <div className="flex items-center gap-4">
           <Link to="/admin" className="hover:text-gov-accent flex items-center gap-1">

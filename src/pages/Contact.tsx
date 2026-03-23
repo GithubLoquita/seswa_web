@@ -35,17 +35,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gov-blue uppercase tracking-wider">Address</h4>
-                  <p className="text-gray-600">West Bengal, India</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 bg-gov-light rounded border border-gov-border hover:border-gov-blue transition-colors group">
-                <div className="bg-gov-blue text-white p-3 rounded-full group-hover:bg-gov-accent group-hover:text-gov-blue transition-colors">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gov-blue uppercase tracking-wider">Phone</h4>
-                  <p className="text-gray-600">+91-XXXXXXXXXX</p>
+                  <p className="text-gray-600">Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</p>
                 </div>
               </div>
 
@@ -55,7 +45,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gov-blue uppercase tracking-wider">Email</h4>
-                  <p className="text-gray-600">contact@seswa.org.in</p>
+                  <p className="text-gray-600">seswa@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -131,10 +121,10 @@ const Contact: React.FC = () => {
 
       {/* Map Placeholder */}
       <section className="h-96 bg-gov-light rounded border border-gov-border overflow-hidden relative">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 flex-col gap-2">
+        <div className="absolute inset-0 flex items-center justify-center text-gray-400 flex-col gap-2 p-4 text-center">
           <MapPin size={48} />
           <p className="font-bold uppercase tracking-wider">Interactive Map Placeholder</p>
-          <p className="text-xs">West Bengal, India</p>
+          <p className="text-xs">Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</p>
         </div>
       </section>
     </div>

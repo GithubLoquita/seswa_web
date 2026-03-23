@@ -12,8 +12,8 @@ const Home: React.FC = () => {
   const { data: notices, loading: noticesLoading } = useFirestore<Notice>('notices', [orderBy('date', 'desc'), limit(5)]);
   
   const topMembers = [
-    { id: '1', nameEn: 'Shakespear Kisku', nameOl: 'ᱥᱮᱠᱥᱯᱤᱭᱚᱨ ᱠᱤᱥᱠᱩ', designationEn: 'President', designationOl: 'ᱯᱟᱨᱥᱮᱛ', roleEn: 'KGEC', roleOl: 'ᱠᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://picsum.photos/seed/shakespear/200/200' },
-    { id: '2', nameEn: 'Sandip Hembram', nameOl: 'ᱥᱟᱱᱫᱤᱯ ᱦᱮᱢᱵᱽᱨᱚᱢ', designationEn: 'Vice-President', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ', roleEn: 'MAKAUT', roleOl: 'ᱢᱟᱠᱟᱣᱩᱴ', photoUrl: 'https://picsum.photos/seed/sandip/200/200' },
+    { id: '1', nameEn: 'Shakespear Kisku', nameOl: 'ᱥᱮᱠᱥᱯᱤᱭᱚᱨ ᱠᱤᱥᱠᱩ', designationEn: 'President', designationOl: 'ᱯᱟᱨᱥᱮᱛ', roleEn: 'KGEC', roleOl: 'ᱠᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261786/WhatsApp_Image_2026-03-23_at_3.59.25_PM_kcpgkv.jpg' },
+    { id: '2', nameEn: 'Sandip Hembram', nameOl: 'ᱥᱟᱱᱫᱤᱯ ᱦᱮᱢᱵᱽᱨᱚᱢ', designationEn: 'Vice-President', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ', roleEn: 'MAKAUT', roleOl: 'ᱢᱟᱠᱟᱣᱩᱴ', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261488/WhatsApp_Image_2026-03-23_at_3.54.23_PM_jtwdgc.jpg' },
     { id: '3', nameEn: 'Jharna Murmu', nameOl: 'ᱡᱷᱟᱨᱱᱟ ᱢᱩᱨᱢᱩ', designationEn: 'Vice-President (Ladies)', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ (ᱠᱩᱲᱤ)', roleEn: 'JGEC', roleOl: 'ᱡᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://picsum.photos/seed/jharna/200/200' },
   ];
 

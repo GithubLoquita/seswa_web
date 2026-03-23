@@ -49,15 +49,11 @@ const Footer: React.FC = () => {
           <div className="space-y-4 text-sm text-gray-400">
             <p className="flex items-start gap-3">
               <MapPin size={18} className="text-gov-accent flex-shrink-0" />
-              <span>West Bengal, India</span>
-            </p>
-            <p className="flex items-center gap-3">
-              <Phone size={18} className="text-gov-accent flex-shrink-0" />
-              <span>+91-XXXXXXXXXX</span>
+              <span>Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</span>
             </p>
             <p className="flex items-center gap-3">
               <Mail size={18} className="text-gov-accent flex-shrink-0" />
-              <span>contact@seswa.org.in</span>
+              <span>seswa@gmail.com</span>
             </p>
           </div>
         </div>
