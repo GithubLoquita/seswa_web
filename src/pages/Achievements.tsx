@@ -31,11 +31,11 @@ const Achievements: React.FC = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gov-blue text-white uppercase text-sm tracking-wider">
-                  <th className="px-6 py-4 font-bold">Rank</th>
-                  <th className="px-6 py-4 font-bold">Student Name</th>
-                  <th className="px-6 py-4 font-bold">Exam</th>
-                  <th className="px-6 py-4 font-bold">Year</th>
-                  <th className="px-6 py-4 font-bold">Description</th>
+                  <th className="px-6 py-4 font-bold">{t('rank')}</th>
+                  <th className="px-6 py-4 font-bold">{t('student_name')}</th>
+                  <th className="px-6 py-4 font-bold">{t('exam')}</th>
+                  <th className="px-6 py-4 font-bold">{t('year')}</th>
+                  <th className="px-6 py-4 font-bold">{t('description')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gov-border">
@@ -71,7 +71,7 @@ const Achievements: React.FC = () => {
                 ) : (
                   <tr>
                     <td colSpan={5} className="px-6 py-12 text-center text-gray-400">
-                      No achievements recorded yet.
+                      {t('no_achievements')}
                     </td>
                   </tr>
                 )}

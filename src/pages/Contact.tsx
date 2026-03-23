@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p>We are here to help and support you. If you have any questions, suggestions, or would like to join our association, please feel free to reach out to us using the contact details below or by filling out the form.</p>
+              <p>{t('contact_intro')}</p>
             </div>
 
             <div className="space-y-6">
@@ -34,8 +34,8 @@ const Contact: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gov-blue uppercase tracking-wider">Address</h4>
-                  <p className="text-gray-600">Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</p>
+                  <h4 className="font-bold text-gov-blue uppercase tracking-wider">{t('address_label')}</h4>
+                  <p className="text-gray-600">{t('address_text')}</p>
                 </div>
               </div>
 
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gov-blue uppercase tracking-wider">Email</h4>
+                  <h4 className="font-bold text-gov-blue uppercase tracking-wider">{t('email_label')}</h4>
                   <p className="text-gray-600">seswa@gmail.com</p>
                 </div>
               </div>
@@ -53,65 +53,65 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-white border border-gov-border rounded-lg p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-gov-blue uppercase mb-6 border-b border-gov-border pb-2">Send us a Message</h3>
+            <h3 className="text-xl font-bold text-gov-blue uppercase mb-6 border-b border-gov-border pb-2">{t('send_message')}</h3>
             
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center h-64 text-center space-y-4">
                 <CheckCircle size={64} className="text-green-500" />
-                <h4 className="text-xl font-bold text-gov-blue">Message Sent Successfully!</h4>
-                <p className="text-gray-600">Thank you for reaching out. We will get back to you soon.</p>
+                <h4 className="text-xl font-bold text-gov-blue">{t('msg_success')}</h4>
+                <p className="text-gray-600">{t('msg_thanks')}</p>
                 <button 
                   onClick={() => setIsSubmitted(false)}
                   className="text-gov-blue font-bold hover:underline uppercase text-sm"
                 >
-                  Send another message
+                  {t('send_another')}
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">Full Name</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">{t('full_name')}</label>
                     <input 
                       type="text" 
                       required 
                       className="w-full border border-gov-border rounded px-4 py-2 focus:outline-none focus:border-gov-blue transition-colors"
-                      placeholder="Enter your name"
+                      placeholder={t('placeholder_name')}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">Email Address</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">{t('email_address')}</label>
                     <input 
                       type="email" 
                       required 
                       className="w-full border border-gov-border rounded px-4 py-2 focus:outline-none focus:border-gov-blue transition-colors"
-                      placeholder="Enter your email"
+                      placeholder={t('placeholder_email')}
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">Subject</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">{t('subject')}</label>
                   <input 
                     type="text" 
                     required 
                     className="w-full border border-gov-border rounded px-4 py-2 focus:outline-none focus:border-gov-blue transition-colors"
-                    placeholder="Enter subject"
+                    placeholder={t('placeholder_subject')}
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">Message</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-gov-blue">{t('message')}</label>
                   <textarea 
                     required 
                     rows={5}
                     className="w-full border border-gov-border rounded px-4 py-2 focus:outline-none focus:border-gov-blue transition-colors resize-none"
-                    placeholder="Enter your message"
+                    placeholder={t('placeholder_message')}
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
                   className="w-full bg-gov-blue text-white py-3 rounded font-bold uppercase tracking-widest hover:bg-gov-accent hover:text-gov-blue transition-all flex items-center justify-center gap-2"
                 >
-                  <Send size={18} /> Send Message
+                  <Send size={18} /> {t('send_btn')}
                 </button>
               </form>
             )}
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
         <div className="absolute inset-0 flex items-center justify-center text-gray-400 flex-col gap-2 p-4 text-center">
           <MapPin size={48} />
           <p className="font-bold uppercase tracking-wider">Interactive Map Placeholder</p>
-          <p className="text-xs">Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</p>
+          <p className="text-xs">{t('address_text')}</p>
         </div>
       </section>
     </div>

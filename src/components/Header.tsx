@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               "text-lg md:text-xl text-gov-dark mt-1",
               language === 'ol' ? "font-ol" : "font-sans"
             )}>
-              {language === 'en' ? "ᱥᱟᱱᱛᱟᱲ ᱤᱱᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱥᱴᱩᱰᱮᱱᱴᱥ' ᱣᱮᱞᱯᱷᱮᱭᱟᱨ ᱮᱥᱳᱥᱤᱭᱮᱥᱚᱱ (W.B.)" : "Santal Engineering Students' Welfare Association (W.B.)"}
+              {t('site_name')}
             </p>
           </div>
         </div>

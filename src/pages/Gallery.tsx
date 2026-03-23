@@ -23,17 +23,22 @@ const Gallery: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {['All', 'Events', 'Awards', 'Community Activities'].map((cat) => (
+            {[
+              { id: 'All', label: t('all_cat') },
+              { id: 'Events', label: t('events_cat') },
+              { id: 'Awards', label: t('awards_cat') },
+              { id: 'Community Activities', label: t('community_cat') }
+            ].map((cat) => (
               <button
-                key={cat}
-                onClick={() => setFilter(cat as any)}
+                key={cat.id}
+                onClick={() => setFilter(cat.id as any)}
                 className={`px-4 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all border ${
-                  filter === cat 
+                  filter === cat.id 
                     ? 'bg-gov-blue text-white border-gov-blue shadow-md' 
                     : 'bg-white text-gov-blue border-gov-border hover:border-gov-blue'
                 }`}
               >
-                {cat}
+                {cat.label}
               </button>
             ))}
           </div>
@@ -72,7 +77,7 @@ const Gallery: React.FC = () => {
             </AnimatePresence>
           </div>
         ) : (
-          <p className="text-center text-gray-400 py-12">No images found in this category.</p>
+          <p className="text-center text-gray-400 py-12">{t('no_images')}</p>
         )}
       </section>
 

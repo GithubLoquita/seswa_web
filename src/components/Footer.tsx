@@ -27,17 +27,17 @@ const Footer: React.FC = () => {
         {/* Quick Links */}
         <div>
           <h3 className="text-lg font-bold mb-4 border-b border-white/20 pb-2 uppercase tracking-wider">
-            Quick Links
+            {t('quick_links')}
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm text-gray-400">
-            <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-            <li><Link to="/aims" className="hover:text-white transition-colors">Aims & Objectives</Link></li>
-            <li><Link to="/events" className="hover:text-white transition-colors">Events</Link></li>
-            <li><Link to="/notices" className="hover:text-white transition-colors">Notice Board</Link></li>
-            <li><Link to="/members" className="hover:text-white transition-colors">Governing Members</Link></li>
-            <li><Link to="/achievements" className="hover:text-white transition-colors">Achievements</Link></li>
-            <li><Link to="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
+            <li><Link to="/" className="hover:text-white transition-colors">{t('home_us')}</Link></li>
+            <li><Link to="/about" className="hover:text-white transition-colors">{t('about_us')}</Link></li>
+            <li><Link to="/aims" className="hover:text-white transition-colors">{t('aims')}</Link></li>
+            <li><Link to="/events" className="hover:text-white transition-colors">{t('events')}</Link></li>
+            <li><Link to="/notices" className="hover:text-white transition-colors">{t('notice_board')}</Link></li>
+            <li><Link to="/members" className="hover:text-white transition-colors">{t('members')}</Link></li>
+            <li><Link to="/achievements" className="hover:text-white transition-colors">{t('achievements')}</Link></li>
+            <li><Link to="/gallery" className="hover:text-white transition-colors">{t('gallery')}</Link></li>
           </ul>
         </div>
 
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4 text-sm text-gray-400">
             <p className="flex items-start gap-3">
               <MapPin size={18} className="text-gov-accent flex-shrink-0" />
-              <span>Nityananda Nagar, D.S.Lane, Howrah, Kolkata, India, PIN: 711 109</span>
+              <span>{t('address_text')}</span>
             </p>
             <p className="flex items-center gap-3">
               <Mail size={18} className="text-gov-accent flex-shrink-0" />
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
         <p>{t('copyright')}</p>
-        <p className="mt-2">Designed and Maintained by SESWA IT Cell.</p>
+        <p className="mt-2">{t('designed_by')}</p>
       </div>
     </footer>
   );

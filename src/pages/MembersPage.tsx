@@ -25,7 +25,7 @@ const MembersPage: React.FC = () => {
     <div className="space-y-12">
       <section className="space-y-6">
         <div className="flex items-center gap-4">
-          <h2 className="text-3xl font-bold text-gov-blue uppercase tracking-wider">GENERAL BODY (2025 – 2026)</h2>
+          <h2 className="text-3xl font-bold text-gov-blue uppercase tracking-wider">{t('general_body')}</h2>
           <div className="flex-grow h-1 bg-gov-border"></div>
         </div>
 
@@ -34,10 +34,10 @@ const MembersPage: React.FC = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gov-blue text-white uppercase text-xs tracking-wider">
-                  <th className="px-6 py-4 font-bold border-r border-white/10">Post</th>
-                  <th className="px-6 py-4 font-bold border-r border-white/10">Name</th>
-                  <th className="px-6 py-4 font-bold border-r border-white/10">Institution</th>
-                  <th className="px-6 py-4 font-bold">Contact No.</th>
+                  <th className="px-6 py-4 font-bold border-r border-white/10">{t('post')}</th>
+                  <th className="px-6 py-4 font-bold border-r border-white/10">{t('name')}</th>
+                  <th className="px-6 py-4 font-bold border-r border-white/10">{t('institution')}</th>
+                  <th className="px-6 py-4 font-bold">{t('contact_no')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gov-border">
@@ -63,9 +63,9 @@ const MembersPage: React.FC = () => {
         </div>
 
         <div className="bg-gov-light p-6 rounded border border-gov-border text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-gov-blue mb-2 uppercase tracking-wider">Official Announcement:</p>
+          <p className="font-bold text-gov-blue mb-2 uppercase tracking-wider">{t('official_announcement')}</p>
           <p>
-            All Members are hereby informed that according to our last meeting held on 9th November, the new General Body (GB) member formation for the session 2025-2026 was successfully conducted. The above listed members have been elected to lead the association for the current tenure.
+            {t('announcement_text')}
           </p>
         </div>
       </section>

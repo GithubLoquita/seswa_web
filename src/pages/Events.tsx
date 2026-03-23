@@ -12,7 +12,7 @@ const Events: React.FC = () => {
       titleOl: 'ᱥᱮᱨᱢᱟᱠᱤᱭᱟᱹ ᱯᱤᱠᱱᱤᱠ',
       month: 'January',
       descriptionEn: 'A grand gathering of Santal engineering students from across West Bengal to celebrate unity and culture in a natural setting.',
-      descriptionOl: 'ᱥᱟᱱᱛᱟᱲ ᱤᱱᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱢᱤᱫ ᱢᱟᱨᱟᱝ ᱡᱟᱣᱨᱟ, ᱡᱟᱦᱟᱸ ᱨᱮ ᱡᱩᱢᱤᱫᱽ ᱟᱨ ᱞᱟᱠᱪᱟᱨ ᱨᱮᱱᱟᱜ ᱨᱟᱹᱥᱠᱟᱹ ᱢᱟᱱᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱾',
+      descriptionOl: 'ᱥᱟᱱᱛᱟᱞ ᱤᱧᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱢᱤᱫ ᱢᱟᱨᱟᱝ ᱡᱟᱣᱨᱟ, ᱡᱟᱦᱟᱸ ᱨᱮ ᱡᱩᱢᱤᱫᱽ ᱟᱨ ᱞᱟᱠᱪᱟᱨ ᱨᱮᱱᱟᱜ ᱨᱟᱹᱥᱠᱟᱹ ᱢᱟᱱᱟᱣ ᱦᱩᱭᱩᱜᱼᱟ ᱾',
       image: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774260308/WhatsApp_Image_2025-07-01_at_21.13.22_24f9b261_yuem3t.jpg',
       highlightsEn: ['Cultural Performances', 'Traditional Food', 'Networking Sessions'],
       highlightsOl: ['ᱞᱟᱠᱪᱟᱨ ᱮᱱᱮᱡ ᱥᱮᱨᱮᱧ', 'ᱟᱹᱨᱤᱪᱟᱹᱞᱤ ᱡᱚᱢᱟᱜ', 'ᱱᱮᱴᱣᱟᱨᱠᱤᱝ ᱥᱮᱥᱚᱱ'],

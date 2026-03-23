@@ -87,7 +87,7 @@ const Home: React.FC = () => {
                 </div>
               ))
             ) : (
-              <p className="text-center text-gray-400 text-sm py-12">No notices available.</p>
+              <p className="text-center text-gray-400 text-sm py-12">{t('no_notices')}</p>
             )}
             <Link to="/notices" className="block text-center text-gov-blue text-sm font-bold hover:underline mt-4">
               {t('view_all')}
@@ -100,22 +100,22 @@ const Home: React.FC = () => {
           <Link to="/events" className="group p-6 bg-white border border-gov-border rounded shadow-sm hover:border-gov-blue transition-all">
             <Calendar className="text-gov-blue mb-4 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="text-xl font-bold text-gov-blue mb-2 uppercase">{t('events')}</h4>
-            <p className="text-sm text-gray-600">Explore our annual picnic, freshers welcome, and other community events.</p>
+            <p className="text-sm text-gray-600">{t('events_desc')}</p>
           </Link>
           <Link to="/achievements" className="group p-6 bg-white border border-gov-border rounded shadow-sm hover:border-gov-blue transition-all">
             <Award className="text-gov-blue mb-4 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="text-xl font-bold text-gov-blue mb-2 uppercase">{t('achievements')}</h4>
-            <p className="text-sm text-gray-600">Celebrating the success of our students in WBJEE, IITJEE, and AIEEE.</p>
+            <p className="text-sm text-gray-600">{t('achievements_desc')}</p>
           </Link>
           <Link to="/aims" className="group p-6 bg-white border border-gov-border rounded shadow-sm hover:border-gov-blue transition-all">
             <Bell className="text-gov-blue mb-4 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="text-xl font-bold text-gov-blue mb-2 uppercase">{t('aims')}</h4>
-            <p className="text-sm text-gray-600">Our 12 core objectives focused on welfare and cultural preservation.</p>
+            <p className="text-sm text-gray-600">{t('aims_desc')}</p>
           </Link>
           <Link to="/gallery" className="group p-6 bg-white border border-gov-border rounded shadow-sm hover:border-gov-blue transition-all">
             <User className="text-gov-blue mb-4 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="text-xl font-bold text-gov-blue mb-2 uppercase">{t('gallery')}</h4>
-            <p className="text-sm text-gray-600">Visual journey of our association's activities and community impact.</p>
+            <p className="text-sm text-gray-600">{t('gallery_desc')}</p>
           </Link>
         </div>
       </div>
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
         </div>
         <div className="text-center mt-8">
           <Link to="/members" className="text-gov-blue font-bold hover:underline uppercase tracking-wider">
-            View All Governing Members
+            {t('view_all_members')}
           </Link>
         </div>
       </section>
