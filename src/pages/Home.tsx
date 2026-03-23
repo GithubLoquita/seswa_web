@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   const topMembers = [
     { id: '1', nameEn: 'Shakespear Kisku', nameOl: 'ᱥᱮᱠᱥᱯᱤᱭᱚᱨ ᱠᱤᱥᱠᱩ', designationEn: 'President', designationOl: 'ᱯᱟᱨᱥᱮᱛ', roleEn: 'KGEC', roleOl: 'ᱠᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261786/WhatsApp_Image_2026-03-23_at_3.59.25_PM_kcpgkv.jpg' },
     { id: '2', nameEn: 'Sandip Hembram', nameOl: 'ᱥᱟᱱᱫᱤᱯ ᱦᱮᱢᱵᱽᱨᱚᱢ', designationEn: 'Vice-President', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ', roleEn: 'MAKAUT', roleOl: 'ᱢᱟᱠᱟᱣᱩᱴ', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261488/WhatsApp_Image_2026-03-23_at_3.54.23_PM_jtwdgc.jpg' },
-    { id: '3', nameEn: 'Jharna Murmu', nameOl: 'ᱡᱷᱟᱨᱱᱟ ᱢᱩᱨᱢᱩ', designationEn: 'Vice-President (Ladies)', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ (ᱠᱩᱲᱤ)', roleEn: 'JGEC', roleOl: 'ᱡᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://picsum.photos/seed/jharna/200/200' },
+    { id: '3', nameEn: 'Jharna Murmu', nameOl: 'ᱡᱷᱟᱨᱱᱟ ᱢᱩᱨᱢᱩ', designationEn: 'Vice-President (Ladies)', designationOl: 'ᱩᱯᱚ-ᱯᱟᱨᱥᱮᱛ (ᱠᱩᱲᱤ)', roleEn: 'JGEC', roleOl: 'ᱡᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774267159/WhatsApp_Image_2026-03-23_at_5.29.01_PM_fit1lo.jpg' },
   ];
 
   return (
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                 <img 
                   src={member.photoUrl} 
                   alt={member.nameEn} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
                 />
               </div>
