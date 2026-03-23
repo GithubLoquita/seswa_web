@@ -50,7 +50,7 @@ export interface Achievement {
 export interface GalleryImage {
   id: string;
   url: string;
-  category: 'Events' | 'Awards' | 'Community Activities';
+  category: 'Events' | 'Awards' | 'Community Activities' | 'Freshers Welcome' | 'Annual Picnic';
   captionEn: string;
   captionOl: string;
 }

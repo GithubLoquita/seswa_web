@@ -59,6 +59,8 @@ const translations: Record<string, Record<Language, string>> = {
   'events_cat': { en: 'Events', ol: 'ᱜᱷᱚᱴᱚᱱ' },
   'awards_cat': { en: 'Awards', ol: 'ᱥᱤᱨᱯᱷᱟᱹ' },
   'community_cat': { en: 'Community Activities', ol: 'ᱥᱟᱶᱛᱟ ᱟᱹᱨᱤ ᱠᱟᱹᱢᱤ ᱦᱚᱨᱟ' },
+  'freshers_welcome': { en: 'Freshers Welcome', ol: 'ᱱᱟᱣᱟ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚ ᱟᱛᱟᱝ ᱫᱟᱨᱟᱢ' },
+  'annual_picnic': { en: 'Annual Picnic', ol: 'ᱥᱮᱨᱢᱟᱠᱤᱭᱟᱹ ᱯᱤᱠᱱᱤᱠ' },
   'no_images': { en: 'No images found in this category.', ol: 'ᱱᱚᱣᱟ ᱛᱷᱚᱠ ᱨᱮ ᱪᱮᱫ ᱪᱤᱛᱟᱹᱨ ᱦᱚᱸ ᱵᱟᱹᱱᱩᱜᱼᱟ ᱾' },
   'events_desc': { en: 'Explore our annual picnic, freshers welcome, and other community events.', ol: 'ᱟᱞᱮᱭᱟᱜ ᱥᱮᱨᱢᱟᱠᱤᱭᱟᱹ ᱯᱤᱠᱱᱤᱠ, ᱱᱟᱣᱟ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚ ᱟᱛᱟᱝ ᱫᱟᱨᱟᱢ ᱟᱨ ᱮᱴᱟᱜ ᱠᱟᱹᱢᱤ ᱦᱚᱨᱟ ᱠᱚ ᱧᱮᱞ ᱢᱮ ᱾' },
   'achievements_desc': { en: 'Celebrating the success of our students in WBJEE, IITJEE, and AIEEE.', ol: 'WBJEE, IITJEE, ᱟᱨ AIEEE ᱨᱮ ᱟᱵᱚ ᱨᱮᱱ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱡᱤᱛᱠᱟᱹᱨ ᱢᱟᱱᱟᱣ ᱾' },

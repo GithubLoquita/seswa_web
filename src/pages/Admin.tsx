@@ -27,19 +27,19 @@ const Admin: React.FC = () => {
       const galleryImages = [
         {
           url: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774260303/DSC00313_hny7hp.jpg',
-          category: 'Events',
-          captionEn: 'Freshers Welcome Celebration',
-          captionOl: 'ᱱᱟᱣᱟ ᱥᱚᱦᱮᱫ ᱠᱚ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ ᱢᱟᱱᱟᱣ',
+          category: 'Freshers Welcome',
+          captionEn: 'Freshers Welcome Celebration 2025',
+          captionOl: '᱒᱐᱒᱕ ᱱᱟᱣᱟ ᱥᱚᱦᱮᱫ ᱠᱚ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ ᱢᱟᱱᱟᱣ',
         },
         {
           url: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774259575/DSC00146_mdt6t5.jpg',
-          category: 'Events',
+          category: 'Freshers Welcome',
           captionEn: 'Freshers Welcome Cultural Program',
           captionOl: 'ᱱᱟᱣᱟ ᱥᱚᱦᱮᱫ ᱠᱚ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ ᱞᱟᱠᱪᱟᱨ ᱦᱮᱯᱨᱟᱣ',
         },
         {
           url: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774260308/WhatsApp_Image_2025-07-01_at_21.13.22_24f9b261_yuem3t.jpg',
-          category: 'Events',
+          category: 'Annual Picnic',
           captionEn: 'Annual Picnic Group Photo',
           captionOl: 'ᱥᱮᱨᱢᱟᱠᱤᱭᱟᱹ ᱯᱤᱠᱱᱤᱠ ᱜᱟᱫᱮᱞ ᱪᱤᱛᱟᱹᱨ',
         }
@@ -182,7 +182,7 @@ const Admin: React.FC = () => {
   // Form states for new gallery image
   const [newGalleryImage, setNewGalleryImage] = useState({
     url: '',
-    category: 'Events' as 'Events' | 'Awards' | 'Community Activities',
+    category: 'Events' as 'Events' | 'Awards' | 'Community Activities' | 'Freshers Welcome' | 'Annual Picnic',
     captionEn: '',
     captionOl: ''
   });
@@ -413,6 +413,8 @@ const Admin: React.FC = () => {
               <option value="Events">Events</option>
               <option value="Awards">Awards</option>
               <option value="Community Activities">Community Activities</option>
+              <option value="Freshers Welcome">Freshers Welcome</option>
+              <option value="Annual Picnic">Annual Picnic</option>
             </select>
             <button 
               type="submit" 

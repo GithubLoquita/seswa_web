@@ -7,7 +7,7 @@ import { GalleryImage } from '../types';
 
 const Gallery: React.FC = () => {
   const { t, language } = useLanguage();
-  const [filter, setFilter] = useState<'All' | 'Events' | 'Awards' | 'Community Activities'>('All');
+  const [filter, setFilter] = useState<'All' | 'Events' | 'Awards' | 'Community Activities' | 'Freshers Welcome' | 'Annual Picnic'>('All');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const { data: images, loading } = useFirestore<GalleryImage>('gallery');
 
@@ -27,7 +27,9 @@ const Gallery: React.FC = () => {
               { id: 'All', label: t('all_cat') },
               { id: 'Events', label: t('events_cat') },
               { id: 'Awards', label: t('awards_cat') },
-              { id: 'Community Activities', label: t('community_cat') }
+              { id: 'Community Activities', label: t('community_cat') },
+              { id: 'Freshers Welcome', label: t('freshers_welcome') },
+              { id: 'Annual Picnic', label: t('annual_picnic') }
             ].map((cat) => (
               <button
                 key={cat.id}
