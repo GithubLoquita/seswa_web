@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-12">
       {/* Hero Section */}
-      <section className="relative h-[400px] overflow-hidden rounded-lg border border-gov-border shadow-sm">
+      <section className="relative h-[400px] overflow-hidden border border-gov-border shadow-sm">
         <img 
           src="https://res.cloudinary.com/doq1ara3j/image/upload/v1774259597/DSC09892_ehkpgj.jpg" 
           alt="SESWA Banner" 
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               transition={{ delay: 0.4 }}
               className="mt-8"
             >
-              <Link to="/about" className="bg-gov-accent text-gov-blue px-6 py-3 rounded font-bold uppercase tracking-wider hover:bg-white transition-colors flex items-center gap-2 w-fit">
+              <Link to="/about" className="bg-gov-accent text-gov-blue px-6 py-3 font-bold uppercase tracking-wider hover:bg-white transition-colors flex items-center gap-2 w-fit">
                 {t('about')} <ArrowRight size={18} />
               </Link>
             </motion.div>
