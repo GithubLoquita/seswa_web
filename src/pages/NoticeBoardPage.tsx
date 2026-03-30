@@ -54,7 +54,7 @@ const NoticeItem: React.FC<{ notice: any }> = ({ notice }) => {
 
 const NoticeBoardPage: React.FC = () => {
   const { t } = useLanguage();
-  const { data: notices, loading, error } = useFirestore<Notice>('notices', [orderBy('date', 'desc')]);
+  const { data: notices, loading, error } = useFirestore<Notice>('notices');
 
   const hardcodedNotice = { 
     id: 'gb-2025', 
@@ -66,7 +66,9 @@ const NoticeBoardPage: React.FC = () => {
     contentOl: 'ᱡᱚᱛᱚ ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱰᱟᱭ ᱚᱪᱚ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ ᱡᱮ ᱙ ᱱᱚᱵᱷᱮᱢᱵᱚᱨ ᱦᱤᱞᱚᱜ ᱦᱩᱭ ᱟᱠᱟᱱ ᱟᱵᱚᱣᱟᱜ ᱢᱩᱪᱟᱹᱫ ᱜᱟᱞᱢᱟᱨᱟᱣ ᱞᱮᱠᱟᱛᱮ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱵᱮᱱᱟᱣ ᱠᱟᱹᱢᱤ ᱱᱟᱯᱟᱭ ᱛᱮ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ ᱾ ᱒᱐᱒᱕-᱒᱐᱒᱖ ᱥᱮᱥᱚᱱ ᱞᱟᱹᱜᱤᱫ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱪᱷᱚᱱ ᱟᱠᱟᱱᱟ ᱾' 
   };
 
-  const allNotices = [hardcodedNotice, ...notices];
+  const allNotices = [hardcodedNotice, ...notices].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
     <div className="space-y-12">

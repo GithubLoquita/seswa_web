@@ -9,7 +9,7 @@ import { orderBy, limit } from 'firebase/firestore';
 
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
-  const { data: notices, loading: noticesLoading } = useFirestore<Notice>('notices', [orderBy('date', 'desc'), limit(5)]);
+  const { data: notices, loading: noticesLoading } = useFirestore<Notice>('notices');
   
   const hardcodedNotice = { 
     id: 'gb-2025', 
@@ -21,7 +21,8 @@ const Home: React.FC = () => {
     contentOl: 'ᱡᱚᱛᱚ ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱰᱟᱭ ᱚᱪᱚ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ ᱡᱮ ᱙ ᱱᱚᱵᱷᱮᱢᱵᱚᱨ ᱦᱤᱞᱚᱜ ᱦᱩᱭ ᱟᱠᱟᱱ ᱟᱵᱚᱣᱟᱜ ᱢᱩᱪᱟᱹᱫ ᱜᱟᱞᱢᱟᱨᱟᱣ ᱞᱮᱠᱟᱛᱮ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱵᱮᱱᱟᱣ ᱠᱟᱹᱢᱤ ᱱᱟᱯᱟᱭ ᱛᱮ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ ᱾ ᱒᱐᱒᱕-᱒᱐᱒᱖ ᱥᱮᱥᱚᱱ ᱞᱟᱹᱜᱤᱫ ᱱᱟᱣᱟ ᱡᱤ.ᱵᱤ. ᱥᱚᱦᱮᱫ ᱠᱚ ᱵᱟᱪᱷᱚᱱ ᱟᱠᱟᱱᱟ ᱾' 
   };
 
-  const displayNotices = notices.length > 0 ? notices : [hardcodedNotice];
+  const displayNotices = [hardcodedNotice, ...notices]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
   const topMembers = [
     { id: '1', nameEn: 'Shakespear Kisku', nameOl: 'ᱥᱮᱠᱥᱯᱤᱭᱚᱨ ᱠᱤᱥᱠᱩ', designationEn: 'President', designationOl: 'ᱯᱟᱨᱥᱮᱛ', roleEn: 'KGEC', roleOl: 'ᱠᱮ.ᱡᱤ.ᱤ.ᱥᱤ.', photoUrl: 'https://res.cloudinary.com/doq1ara3j/image/upload/v1774261786/WhatsApp_Image_2026-03-23_at_3.59.25_PM_kcpgkv.jpg' },
@@ -77,42 +78,47 @@ const Home: React.FC = () => {
             <Bell size={20} />
             <h3 className="font-bold uppercase tracking-wider">{t('notice_board')}</h3>
           </div>
-          <div className="border border-gov-border rounded-b bg-gov-light h-[400px] overflow-y-auto p-4 space-y-4 scrollbar-thin">
+          <div className="border border-gov-border rounded-b bg-gov-light h-[400px] overflow-hidden p-4 relative">
             {noticesLoading ? (
               <div className="flex justify-center py-12"><Loader2 className="animate-spin text-gov-blue" /></div>
             ) : displayNotices.length > 0 ? (
-              displayNotices.map((notice) => (
-                <div key={notice.id} className="border-b border-gov-border pb-3 last:border-0">
-                  <div className="flex justify-between items-start gap-2">
-                    <span className="text-[10px] bg-gov-blue text-white px-2 py-0.5 rounded uppercase font-bold">
-                      {notice.date}
-                    </span>
-                    {notice.isImportant && (
-                      <span className="text-[10px] bg-red-600 text-white px-2 py-0.5 rounded uppercase font-bold animate-pulse">
-                        New
+              <div className="animate-vertical-marquee space-y-4">
+                {/* Duplicate the list for seamless scrolling */}
+                {[...displayNotices, ...displayNotices].map((notice, idx) => (
+                  <div key={`${notice.id}-${idx}`} className="border-b border-gov-border pb-3 last:border-0">
+                    <div className="flex justify-between items-start gap-2">
+                      <span className="text-[10px] bg-gov-blue text-white px-2 py-0.5 rounded uppercase font-bold">
+                        {notice.date}
                       </span>
-                    )}
+                      {notice.isImportant && (
+                        <span className="text-[10px] bg-red-600 text-white px-2 py-0.5 rounded uppercase font-bold animate-pulse">
+                          New
+                        </span>
+                      )}
+                    </div>
+                    <Link 
+                      to="/notices" 
+                      className="mt-2 block text-sm font-semibold text-gov-blue hover:text-gov-accent transition-colors"
+                    >
+                      {language === 'en' ? notice.titleEn : notice.titleOl}
+                    </Link>
+                    <Link 
+                      to="/notices" 
+                      className="text-[10px] text-gov-blue font-bold uppercase hover:underline flex items-center gap-0.5 mt-1"
+                    >
+                      View Details <ArrowRight size={10} />
+                    </Link>
                   </div>
-                  <Link 
-                    to="/notices" 
-                    className="mt-2 block text-sm font-semibold text-gov-blue hover:text-gov-accent transition-colors"
-                  >
-                    {language === 'en' ? notice.titleEn : notice.titleOl}
-                  </Link>
-                  <Link 
-                    to="/notices" 
-                    className="text-[10px] text-gov-blue font-bold uppercase hover:underline flex items-center gap-0.5 mt-1"
-                  >
-                    View Details <ArrowRight size={10} />
-                  </Link>
-                </div>
-              ))
+                ))}
+              </div>
             ) : (
               <p className="text-center text-gray-400 text-sm py-12">{t('no_notices')}</p>
             )}
-            <Link to="/notices" className="block text-center text-gov-blue text-sm font-bold hover:underline mt-4">
-              {t('view_all')}
-            </Link>
+            <div className="absolute bottom-0 left-0 right-0 bg-gov-light p-2 border-t border-gov-border z-10">
+              <Link to="/notices" className="block text-center text-gov-blue text-sm font-bold hover:underline">
+                {t('view_all')}
+              </Link>
+            </div>
           </div>
         </div>
 

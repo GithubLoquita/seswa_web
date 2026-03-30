@@ -39,3 +39,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@keyframes vertical-marquee {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-vertical-marquee {
+  animation: vertical-marquee 30s linear infinite;
+}
+
+.animate-vertical-marquee:hover {
+  animation-play-state: paused;
+}

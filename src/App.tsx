@@ -12,6 +12,7 @@ import Achievements from './pages/Achievements';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import RegistrationForm from './pages/RegistrationForm';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/aims" element={<Aims />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/register" element={<RegistrationForm />} />
             <Route path="/notices" element={<NoticeBoardPage />} />
             <Route path="/members" element={<MembersPage />} />
             <Route path="/achievements" element={<Achievements />} />

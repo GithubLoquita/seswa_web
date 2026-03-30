@@ -66,6 +66,7 @@ const translations: Record<string, Record<Language, string>> = {
   'achievements_desc': { en: 'Celebrating the success of our students in WBJEE, IITJEE, and AIEEE.', ol: 'WBJEE, IITJEE, ᱟᱨ AIEEE ᱨᱮ ᱟᱵᱚ ᱨᱮᱱ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱡᱤᱛᱠᱟᱹᱨ ᱢᱟᱱᱟᱣ ᱾' },
   'aims_desc': { en: 'Our 12 core objectives focused on welfare and cultural preservation.', ol: 'ᱟᱵᱚᱣᱟᱜ ᱑᱒ ᱜᱚᱴᱟᱝ ᱢᱩᱞ ᱡᱚᱥ ᱡᱟᱦᱟᱸ ᱫᱚ ᱵᱷᱟᱹᱞᱟᱹᱭ ᱟᱨ ᱞᱟᱠᱪᱟᱨ ᱡᱚᱜᱟᱣ ᱨᱮ ᱢᱮᱱᱟᱜᱼᱟ ᱾' },
   'gallery_desc': { en: 'Visual journey of our association\'s activities and community impact.', ol: 'ᱟᱵᱚᱣᱟᱜ ᱜᱟᱶᱛᱟ ᱨᱮᱱᱟᱜ ᱠᱟᱹᱢᱤ ᱦᱚᱨᱟ ᱟᱨ ᱥᱟᱶᱛᱟ ᱨᱮ ᱚᱨᱥᱚᱝ ᱨᱮᱱᱟᱜ ᱪᱤᱛᱟᱹᱨ ᱾' },
+  'register_now': { en: 'Register Now', ol: 'ᱱᱤᱛᱚᱜ ᱨᱮᱡᱤᱥᱴᱟᱨ ᱢᱮ' },
   'about_p1': {
     en: "The Santal Engineering Students' Welfare Association (W.B.), commonly known as SESWA, is a premier non-profit organization dedicated to the upliftment and welfare of Santal engineering students across West Bengal. Established in 2003, the association has been a beacon of hope, unity, and cultural pride for over two decades.",
     ol: "ᱥᱟᱱᱛᱟᱞ ᱤᱧᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱥᱴᱩᱰᱮᱱᱴᱥ ᱳᱭᱮᱞᱯᱷᱮᱭᱟᱨ ᱮᱥᱳᱥᱤᱭᱮᱥᱮᱱ (ᱯ.ᱵ.), ᱡᱟᱦᱟᱸ ᱫᱚ SESWA ᱢᱮᱱᱛᱮ ᱵᱟᱰᱟᱭᱚᱜᱼᱟ, ᱯᱩᱪᱷᱤᱢ ᱵᱟᱝᱞᱟ ᱨᱮᱱ ᱥᱟᱱᱛᱟᱞ ᱤᱧᱡᱤᱱᱤᱭᱟᱨᱤᱝ ᱯᱟᱹᱴᱷᱩᱣᱟᱹ ᱠᱚᱣᱟᱜ ᱞᱟᱦᱟᱱᱛᱤ ᱟᱨ ᱵᱷᱟᱹᱞᱟᱹᱭ ᱞᱟᱹᱜᱤᱫ ᱢᱤᱫ ᱢᱟᱨᱟᱝ ᱵᱮᱼᱞᱟᱵᱷ ᱜᱟᱶᱛᱟ ᱠᱟᱱᱟ ᱾ ᱒᱐᱐᱓ ᱥᱮᱨᱢᱟ ᱨᱮ ᱵᱮᱱᱟᱣ ᱟᱠᱟᱱ ᱱᱚᱣᱟ ᱜᱟᱶᱛᱟ ᱫᱚ ᱵᱟᱨ ᱜᱮᱞ ᱥᱮᱨᱢᱟ ᱠᱷᱚᱱ ᱟᱥᱟ, ᱡᱩᱢᱤᱫᱽ ᱟᱨ ᱞᱟᱠᱪᱟᱨ ᱨᱮᱱᱟᱜ ᱢᱟᱱᱚᱛ ᱮᱢ ᱟᱹᱜᱩᱭᱮᱫᱟ ᱾"

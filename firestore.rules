@@ -51,7 +51,14 @@ service cloud.firestore {
     // Public Read-Only Collections
     match /notices/{noticeId} {
       allow read: if true;
-      allow write: if isAdmin();
+      allow create: if true; // Allow public creation for registration notifications
+      allow update, delete: if isAdmin();
+    }
+
+    match /registrations/{registrationId} {
+      allow read: if isAdmin();
+      allow create: if true;
+      allow update, delete: if isAdmin();
     }
 
     match /members/{memberId} {

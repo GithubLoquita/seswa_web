@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Calendar, MapPin, Users, Image as ImageIcon } from 'lucide-react';
+import { Calendar, MapPin, Users, Image as ImageIcon, ClipboardCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Events: React.FC = () => {
   const { t, language } = useLanguage();
@@ -72,7 +73,13 @@ const Events: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="pt-4 flex gap-4">
+                <div className="pt-4 flex flex-wrap gap-4">
+                  <Link 
+                    to={`/register?event=${encodeURIComponent(language === 'en' ? event.titleEn : event.titleOl)}`}
+                    className="bg-gov-accent text-gov-blue px-6 py-2 rounded text-sm font-bold uppercase tracking-wider hover:bg-gov-blue hover:text-white transition-all flex items-center gap-2 shadow-sm"
+                  >
+                    <ClipboardCheck size={16} /> {t('register_now')}
+                  </Link>
                   <button className="bg-gov-blue text-white px-4 py-2 rounded text-sm font-bold uppercase tracking-wider hover:bg-gov-accent hover:text-gov-blue transition-colors flex items-center gap-2">
                     <ImageIcon size={16} /> View Gallery
                   </button>

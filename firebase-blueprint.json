@@ -73,6 +73,22 @@
         "captionOl": { "type": "string" }
       },
       "required": ["url", "category", "captionEn", "captionOl"]
+    },
+    "Registration": {
+      "title": "Registration",
+      "description": "An event registration submitted by a student.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "college": { "type": "string" },
+        "year": { "type": "string" },
+        "department": { "type": "string" },
+        "event": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "phone", "college", "year", "department", "event", "timestamp"]
     }
   },
   "firestore": {
@@ -80,6 +96,7 @@
     "/members/{memberId}": { "schema": "Member", "description": "Collection of governing members" },
     "/events/{eventId}": { "schema": "Event", "description": "Collection of association events" },
     "/achievements/{achievementId}": { "schema": "Achievement", "description": "Collection of student achievements" },
-    "/gallery/{imageId}": { "schema": "GalleryImage", "description": "Collection of gallery images" }
+    "/gallery/{imageId}": { "schema": "GalleryImage", "description": "Collection of gallery images" },
+    "/registrations/{registrationId}": { "schema": "Registration", "description": "Collection of event registrations" }
   }
 }
